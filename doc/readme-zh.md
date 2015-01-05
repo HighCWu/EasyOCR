@@ -24,7 +24,7 @@ tesseract-ocr 是一个相对精准的开源免费 OCR 引擎。但 OCR 引擎�
 
 1. 必须首先在服务器下载并安装[Tesseract-OCR（项目主页）](https://code.google.com/p/tesseract-ocr/ "Tesserat-OCR Homepage")。在PATH环境变量中添加Tesseract-OCR的执行目录（可选，推荐设置）。
 
-2. 加入`easyocr-1.0.0-RELEASE.jar`
+2. 加入`easyocr-2.0.0-RELEASE.jar`
 
 3. 调用API
 
@@ -59,11 +59,19 @@ System.out.println(e.discernAndAutoCleanImage("images/img_NORMAL.jpg", ImageType
 
 ## 结束
 
-
+[留言评论](http://www.easyproject.cn/easyocr/zh-cn/index.jsp#about '留言评论')
 
 如果您有更好意见，建议或想法，请联系我。
 
 
 联系、反馈、定制、培训 Email：<inthinkcolor@gmail.com>
+
+<p>
+<strong>支付宝钱包扫一扫捐助：</strong>
+</p>
+<p>
+
+<img alt="支付宝钱包扫一扫捐助" src="http://www.easyproject.cn/images/s.png"  title="支付宝钱包扫一扫捐助"  height="256" width="256"></img>
+
 
 [http://www.easyproject.cn](http://www.easyproject.cn "EasyProject Home")

@@ -237,7 +237,7 @@ The following methods can be directly set the default property values EasyOCR in
 
 ## End
 
-
+[留言评论](http://www.easyproject.cn/easyocr/zh-cn/index.jsp#about '留言评论')
 
 If you have more comments, suggestions or ideas, please contact me.
 
