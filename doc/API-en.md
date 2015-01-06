@@ -55,8 +55,8 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
     /**
 	 * Image Cleanup
 	 * 
-     *@param From the need to clean up the images, support for String String path, File file object, FileInputStream input stream, and other heavy-duty
-     *@param To clean up after the images, support for String String path, File file objects, and other heavy-duty.
+     *@param From the need to clean up the images, support for String String path, File file object, FileInputStream input stream, and other overload
+     *@param To clean up after the images, support for String String path, File file objects, and other overload.
      *@param ImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved, the default is 1
      *@param ImageHeightRatio directly specified height of the image magnification, some pictures after deformation recognition rate can be improved, the default is 1
      *@param Degrees clockwise angle pictures directly specified, the default is 0
@@ -132,28 +132,28 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 	/**
 	 * Identification picture content, and return to read the contents of the string
 	 * 
-	 * @param fromImage To identify the picture
+	 * @param fromImage To identify the picture, support for String String path, File file object, FileInputStream input stream, and other overload
 	 * @return Code read
 	 */
-	public String discern(String fromImage)
+	public String discern(fromImage)
 
 	/**
 	 * The content identification picture on output to the specified file. ToText parameter is not specified, the default output file name: Photo of .txt
 	 * 
-	 * @param fromImage To identify the picture
+	 * @param fromImage To identify the picture, support for String String path, File file object, FileInputStream input stream, and other overload
 	 * @param toText Save recognize the contents of the file name, the default will automatically add the suffix .txt      
 	 * @return Generation is complete
 	 */
-	public boolean discernToFile(String fromImage [, String toText]) 
+	public boolean discernToFile(fromImage [, String toText]) 
 
     /**
 	 * The content-aware image output to the specified file and read the contents of the string is returned. ToText parameter is not specified, the default output file name: Photo of .txt
 	 * 
-	 * @param fromImage To identify the picture
+	 * @param fromImage To identify the picture, support for String String path, File file object, FileInputStream input stream, and other overload
 	 * @param toText  Save recognize the contents of the file name, the default will automatically add the suffix .txt      
 	 * @return Code read
 	 */
-	public String discernToFileAndGet(String fromImage [, String toText]) 
+	public String discernToFileAndGet(fromImage [, String toText]) 
 ```
 
  - Clean and identify pictures
@@ -161,19 +161,19 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 	/**
     * Press the picture type, strain ratio clockwise angle scene cleanup identification picture content, and return to read the contents of the string
     *
-    * @param FromImage Original Picture
+    * @param FromImage to identify pictures, support for String String path, File file object, FileInputStream input stream, and other overload
     * @param ImageType picture type enumeration, the default is ImageType.NONE
     * @param AutoCleanImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved
     * @param AutoCleanImageHeightRatio directly specified height of the image magnification, after some pictures deformation recognition rate can be improved
     * @param AutoCleanDegrees picture clockwise angle when automatic cleaning
     * @return Identify the content
     */
-	public String discernAndAutoCleanImage(String fromImage [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
+	public String discernAndAutoCleanImage(fromImage [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
 
     /**
     * Press the picture type, strain ratio clockwise angle scene cleanup identify the image content, the output to the specified file, the default file name: Photo of .txt
     *
-    * @param FromImage to identify pictures
+    * @param FromImage to identify pictures, support for String String path, File file object, FileInputStream input stream, and other overload
     * @param ToFile save the contents of the file, toText parameter is not specified, the default output file name: Photo of .txt
     * @param ImageType image type, ImageType.NONE
     * @param AutoCleanImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved
@@ -181,12 +181,12 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
     * @param AutoCleanDegrees picture clockwise angle when automatic cleaning
     * @return Generation is complete
     */
-	public boolean discernToFileAndAutoCleanImage(String fromImage [,String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public boolean discernToFileAndAutoCleanImage(fromImage [,String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 
 	/**
     * Press the picture type, strain ratio clockwise angle scene cleanup identification picture content, output to the specified file and returns to read the contents of the string, the output file without .txt extension
     *
-    * @param FromImage to identify pictures
+    * @param FromImage to identify pictures, support for String String path, File file object, FileInputStream input stream, and other overload
     *param ToFile while preserving the contents of the file, not toText parameter is specified, the default output file name: Photo of .txt
     * @param ImageType image type
     * @param AutoCleanImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved
@@ -194,7 +194,7 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
     * @param AutoCleanDegrees picture clockwise angle when automatic cleaning
     * @return Read code
     */
-	public String discernToFileAndGetAndAutoCleanImage(String fromImage [, String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public String discernToFileAndGetAndAutoCleanImage(fromImage [, String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 ```
 
 4. **Other methods:**

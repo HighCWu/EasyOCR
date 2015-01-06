@@ -133,28 +133,28 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	/**
 	 * 识别图片内容，并返回读取到的内容字符串
 	 * 
-	 * @param fromImage 要识别的图片
+	 * @param fromImage 要识别的图片，支持String字符串路径、File文件对象、FileInputStream输入流等多种重载
 	 * @return 读取到的代码
 	 */
-	public String discern(String fromImage)
+	public String discern(fromImage)
 
 	/**
 	 * 将识别的图片上的内容输出到指定文件。不指定toText参数时，默认输出文件名为：图片名.txt
 	 * 
-	 * @param fromImage 要识别的图片，
+	 * @param fromImage 要识别的图片，支持String字符串路径、File文件对象、FileInputStream输入流等多种重载
 	 * @param toText 保存识别内容的文件名，默认会自动添加.txt后缀       
 	 * @return 生成是否完成
 	 */
-	public boolean discernToFile(String fromImage [, String toText]) 
+	public boolean discernToFile(fromImage [, String toText]) 
 
     /**
 	 * 将识别的图片上的内容输出到指定文件，并返回读取到的内容字符串。不指定toText参数时，默认输出文件名为：图片名.txt
 	 * 
-	 * @param fromImage 要识别的图片
+	 * @param fromImage 要识别的图片，支持String字符串路径、File文件对象、FileInputStream输入流等多种重载
 	 * @param toText  同时保存进的的文件，默认会自动添加.txt后缀    
 	 * @return 读取到的代码
 	 */
-	public String discernToFileAndGet(String fromImage [, String toText]) 
+	public String discernToFileAndGet(fromImage [, String toText]) 
 ```
 
  - 清理并识别图片
@@ -162,19 +162,19 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	/**
 	 * 按图片类型、形变比例、顺时针旋转角度等场景，清理识别图片内容，并返回读取到的内容字符串
 	 * 
-	 * @param fromImage 原始图片
+	 * @param fromImage 要识别的图片，支持String字符串路径、File文件对象、FileInputStream输入流等多种重载
 	 * @param imageType 图片类型枚举，默认为ImageType.NONE
 	 * @param autoCleanImageWidthRatio 直接指定图片宽度度放大比例，某些图片形变后识别率可以提高
 	 * @param autoCleanImageHeightRatio 直接指定图片高度放大比例，某些图片形变后识别率可以提高
 	 * @param autoCleanDegrees 图片自动清理时的顺时针旋转角度               
 	 * @return 识别内容
 	 */
-	public String discernAndAutoCleanImage(String fromImage [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
+	public String discernAndAutoCleanImage(fromImage [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
 
 	/**
 	 * 按图片类型、形变比例、顺时针旋转角度等场景，清理识别图片内容，输出到指定文件，默认文件名为：图片名.txt
 	 * 
-	 * @param fromImage 要识别的图片
+	 * @param fromImage 要识别的图片，支持String字符串路径、File文件对象、FileInputStream输入流等多种重载
 	 * @param toFile 保存内容的文件，不指定toText参数时，默认输出文件名为：图片名.txt
 	 * @param imageType  图片类型， ImageType.NONE
 	 * @param autoCleanImageWidthRatio  直接指定图片宽度度放大比例，某些图片形变后识别率可以提高
@@ -182,12 +182,12 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	 * @param autoCleanDegrees 图片自动清理时的顺时针旋转角度     
 	 * @return 生成是否完成
 	 */
-	public boolean discernToFileAndAutoCleanImage(String fromImage [,String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public boolean discernToFileAndAutoCleanImage(fromImage [,String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 
 	/**
 	 * 按图片类型、形变比例、顺时针旋转角度等场景，清理识别图片内容，输出到指定文件，并返回读取到的内容字符串，输出文件无需后缀名.txt
 	 * 
-	 * @param fromImage 要识别的图片
+	 * @param fromImage 要识别的图片，支持String字符串路径、File文件对象、FileInputStream输入流等多种重载
 	 * @param toFile 同时保存内容的的文件，不指定toText参数时，默认输出文件名为：图片名.txt
 	 * @param imageType 图片类型
 	 * @param autoCleanImageWidthRatio 直接指定图片宽度度放大比例，某些图片形变后识别率可以提高
@@ -195,7 +195,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	 * @param autoCleanDegrees 图片自动清理时的顺时针旋转角度     
 	 * @return 读取到的代码
 	 */
-	public String discernToFileAndGetAndAutoCleanImage(String fromImage [, String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public String discernToFileAndGetAndAutoCleanImage(fromImage [, String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 ```
 
 4. **其他方法：**
