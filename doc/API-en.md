@@ -55,7 +55,7 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
     /**
 	 * Image Cleanup
 	 * 
-     *@param From the need to clean up the images, support for String String path, File file object, FileInputStream input stream, and other overload
+     *@param From the need to clean up the images, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
      *@param To clean up after the images, support for String String path, File file objects, and other overload.
      *@param ImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved, the default is 1
      *@param ImageHeightRatio directly specified height of the image magnification, some pictures after deformation recognition rate can be improved, the default is 1
@@ -132,28 +132,28 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 	/**
 	 * Identification picture content, and return to read the contents of the string
 	 * 
-	 * @param fromImage To identify the picture, support for String String path, File file object, FileInputStream input stream, and other overload
+	 * @param fromImage To identify the picture, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
 	 * @return Code read
 	 */
 	public String discern(fromImage)
 
 	/**
-	 * The content identification picture on output to the specified file. ToText parameter is not specified, the default output file name: Photo of .txt
+	 * The content identification picture on output to the specified file. toFile parameter is not specified, The default output to System.getProperty ("java.io.tmpdir") directory, file name: FileName.txt
 	 * 
-	 * @param fromImage To identify the picture, support for String String path, File file object, FileInputStream input stream, and other overload
-	 * @param toText Save recognize the contents of the file name, the default will automatically add the suffix .txt      
+	 * @param fromImage To identify the picture, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
+	 * @param toFile save the contents of the file, the default will automatically add the suffix .txt      
 	 * @return Generation is complete
 	 */
-	public boolean discernToFile(fromImage [, String toText]) 
+	public boolean discernToFile(fromImage [, String toFile]) 
 
     /**
-	 * The content-aware image output to the specified file and read the contents of the string is returned. ToText parameter is not specified, the default output file name: Photo of .txt
+	 * The content-aware image output to the specified file and read the contents of the string is returned. toFile parameter is not specified, The default output to System.getProperty ("java.io.tmpdir") directory, file name: FileName.txt
 	 * 
-	 * @param fromImage To identify the picture, support for String String path, File file object, FileInputStream input stream, and other overload
-	 * @param toText  Save recognize the contents of the file name, the default will automatically add the suffix .txt      
+	 * @param fromImage To identify the picture, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
+	 * @param toFile  save the contents of the file, the default will automatically add the suffix .txt      
 	 * @return Code read
 	 */
-	public String discernToFileAndGet(fromImage [, String toText]) 
+	public String discernToFileAndGet(fromImage [, String toFile]) 
 ```
 
  - Clean and identify pictures
@@ -161,7 +161,7 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 	/**
     * Press the picture type, strain ratio clockwise angle scene cleanup identification picture content, and return to read the contents of the string
     *
-    * @param FromImage to identify pictures, support for String String path, File file object, FileInputStream input stream, and other overload
+    * @param FromImage to identify pictures, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
     * @param ImageType picture type enumeration, the default is ImageType.NONE
     * @param AutoCleanImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved
     * @param AutoCleanImageHeightRatio directly specified height of the image magnification, after some pictures deformation recognition rate can be improved
@@ -172,9 +172,10 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 
     /**
     * Press the picture type, strain ratio clockwise angle scene cleanup identify the image content, the output to the specified file, the default file name: Photo of .txt
-    *
-    * @param FromImage to identify pictures, support for String String path, File file object, FileInputStream input stream, and other overload
-    * @param ToFile save the contents of the file, toText parameter is not specified, the default output file name: Photo of .txt
+    * toFile parameter is not specified, The default output to System.getProperty ("java.io.tmpdir") directory, file name: FromImageName.txt
+	*
+    * @param FromImage to identify pictures, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
+    * @param ToFile save the contents of the file, the default will automatically add the suffix .txt 
     * @param ImageType image type, ImageType.NONE
     * @param AutoCleanImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved
     * @param AutoCleanImageHeightRatio directly specified height of the image magnification, after some pictures deformation recognition rate can be improved
@@ -185,9 +186,10 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 
 	/**
     * Press the picture type, strain ratio clockwise angle scene cleanup identification picture content, output to the specified file and returns to read the contents of the string, the output file without .txt extension
-    *
-    * @param FromImage to identify pictures, support for String String path, File file object, FileInputStream input stream, and other overload
-    *param ToFile while preserving the contents of the file, not toText parameter is specified, the default output file name: Photo of .txt
+    * toFile parameter is not specified, The default output to System.getProperty ("java.io.tmpdir") directory, file name: FromImageName.txt
+	*
+    * @param FromImage to identify pictures, Support File String path; http://, ftp:// at the beginning of the URL string; File file object; InputStream input stream, a variety of sources overload
+    * @param ToFile save the contents of the file, the default will automatically add the suffix .txt
     * @param ImageType image type
     * @param AutoCleanImageWidthRatio directly specify the degree of magnification image width, after some pictures deformation recognition rate can be improved
     * @param AutoCleanImageHeightRatio directly specified height of the image magnification, after some pictures deformation recognition rate can be improved
