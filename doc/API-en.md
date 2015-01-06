@@ -17,7 +17,10 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
 - ### ImageType image type enumeration (predefined CAPTCHA cleanup mode):
 
   - `CAPTCHA_NORMAL`: ordinary CAPTCHA
-    ![Common code](images/img_NORMAL.jpg) ![Common code](images/img_NORMAL2.png)
+    ![Common code](images/img_NORMAL.jpg) 
+
+ - `CAPTCHA_INTERFERENCE_LINE`: interference lines CAPTCHA
+    ![interference lines CAPTCHA](images/img_INTERFERENCE_LINE.png)
 
   - `CAPTCHA_SPOT`: dot CAPTCHA
     ![Dot code](images/img_SPOT.gif) ![Dot code](images/img_SPOT2.gif)

@@ -24,7 +24,7 @@ tesseract-ocr 是一个相对精准的开源免费 OCR 引擎。但 OCR 引擎�
 
 1. 必须首先在服务器下载并安装[Tesseract-OCR（项目主页）](https://code.google.com/p/tesseract-ocr/ "Tesserat-OCR Homepage")。在PATH环境变量中添加Tesseract-OCR的执行目录（可选，推荐设置）。
 
-2. 加入`easyocr-2.0.0-RELEASE.jar`
+2. 加入`easyocr-2.2.0-RELEASE.jar`
 
 3. 调用API
 
@@ -43,17 +43,31 @@ EasyOCR 内置两套主要的API：
 
 ##  EasyOCR 使用实例：
 ![demo_eurotext.png](images/demo_eurotext.png)  
+
+![img_INTERFERENCE_LINE.png](images/img_INTERFERENCE_LINE.png)  
+
 ![img_NORMAL.jpg](images/img_NORMAL.jpg) 
 
 ```JAVA
 EasyOCR e=new EasyOCR();
 //直接识别图片内容
 System.out.println(e.discern("images/demo_eurotext.png")); 
+//直接识别验证码图片内容
+System.out.println(e.discernAndAutoCleanImage("images/img_INTERFERENCE_LINE.png",ImageType.CAPTCHA_INTERFERENCE_LINE)); 
 //验证码图片，经过：普通清理、形变场景自动一体化处理后，识别内容
 System.out.println(e.discernAndAutoCleanImage("images/img_NORMAL.jpg", ImageType.CAPTCHA_NORMAL, 1.6, 0.7));
 		
 ```
 
+
+提示：对验证码图片进行合适的形变有助于提高识别率。在需要比例调整的特殊情况下，可通过多次分析观察获得合适比例。
+```JAVA
+for(double imageWidthRatio=0.8;imageWidthRatio<=2;imageWidthRatio+=0.1){
+	for (double imageHeightRatio = 0.8;imageHeightRatio<=2.8;imageHeightRatio+=0.1) {
+		System.out.println(e.discernAndAutoCleanImage("images/d.jpg",ImageType.CAPTCHA_NORMAL,imageWidthRatio,imageHeightRatio));
+	}
+}
+```
 
 
 

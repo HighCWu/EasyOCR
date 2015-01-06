@@ -17,19 +17,22 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 - ### ImageType 图片类型枚举（预定义的验证码图片清理模式）：
 
  - `CAPTCHA_NORMAL` ：普通验证码图片
-   ![普通验证码](images/img_NORMAL.jpg)   ![普通验证码](images/img_NORMAL2.png)
+    ![普通验证码](images/img_NORMAL.jpg) 
+
+ - `CAPTCHA_INTERFERENCE_LINE` ：带干扰线的验证码图片
+    ![带干扰线的验证码图片](images/img_INTERFERENCE_LINE.png)
 
  - `CAPTCHA_SPOT` ： 点状验证码图片
-   ![点状验证码](images/img_SPOT.gif)  ![点状验证码](images/img_SPOT2.gif)  
+    ![点状验证码](images/img_SPOT.gif)  ![点状验证码](images/img_SPOT2.gif)  
 
  - `CAPTCHA_WHITE_CHAR` ： 白色文字，纯色背景验证码图片
-   ![白色文字验证码](images/img_WHITE_CHAR.jpg)  ![白色文字验证码](images/img_WHITE_CHAR2.jpg) 
+    ![白色文字验证码](images/img_WHITE_CHAR.jpg)  ![白色文字验证码](images/img_WHITE_CHAR2.jpg) 
  
  - `CAPTCHA_HOLLOW_CHAR` ： 空心文字验证码图片
-   ![空心文字验证码](images/img_HOLLOW.jpg)  ![空心文字验证码](images/img_HOLLOW2.jpg) 
+    ![空心文字验证码](images/img_HOLLOW.jpg)  ![空心文字验证码](images/img_HOLLOW2.jpg) 
  
  - `CLEAR` ： 无特殊干扰的普通图片清晰化，提高识别率
-   ![普通图片清晰化](images/img_CLEAR.jpg)
+    ![普通图片清晰化](images/img_CLEAR.jpg)
   
  - `NONE` ： 在识别时，不对图片做任何清理
 

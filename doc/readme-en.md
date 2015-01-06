@@ -24,7 +24,7 @@ tesseract-ocr is a relatively accurate free open source OCR engine. Character Re
 
 1. You must first download and install [Tesseract-OCR (project home)] (https://code.google.com/p/tesseract-ocr/ "Tesserat-OCR Homepage") in the server. Add Tesseract-OCR perform directory in the PATH environment variable (optional, but recommended setting).
 
-2. Add `easyocr-2.0.0-RELEASE.jar`
+2. Add `easyocr-2.2.0-RELEASE.jar`
 
 3. Call API
 
@@ -43,17 +43,30 @@ Built EasyOCR two main API:
 
 ##  EasyOCR Examples：
 ![demo_eurotext.png](images/demo_eurotext.png)  
+
+![img_INTERFERENCE_LINE.png](images/img_INTERFERENCE_LINE.png)  
+
 ![img_NORMAL.jpg](images/img_NORMAL.jpg) 
 
 ```JAVA
 EasyOCR e=new EasyOCR();
 //Direct identification picture content
 System.out.println(e.discern("images/demo_eurotext.png")); 
+//Direct identification CAPTCHA picture content
+System.out.println(e.discernAndAutoCleanImage("images/img_INTERFERENCE_LINE.png",ImageType.CAPTCHA_INTERFERENCE_LINE)); 
 //CAPTCHA, through: general cleaning, automatic integration scenarios deformation processing, identifying content
 System.out.println(e.discernAndAutoCleanImage("images/img_NORMAL.jpg", ImageType.CAPTCHA_NORMAL, 1.6, 0.7));
 		
 ```
 
+Tip: For verification code image suitable deformation helps to improve the recognition rate. Under special circumstances need to adjust the ratio can be observed by multiple analysis to get the right ratio.
+```JAVA
+for(double imageWidthRatio=0.8;imageWidthRatio<=2;imageWidthRatio+=0.1){
+	for (double imageHeightRatio = 0.8;imageHeightRatio<=2.8;imageHeightRatio+=0.1) {
+		System.out.println(e.discernAndAutoCleanImage("images/d.jpg",ImageType.CAPTCHA_NORMAL,imageWidthRatio,imageHeightRatio));
+	}
+}
+```
 
 
 
