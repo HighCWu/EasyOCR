@@ -1,4 +1,4 @@
-# EasyOCR 使用手册
+# EasyOCR Manual
 
 ---------------
 
