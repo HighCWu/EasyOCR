@@ -39,7 +39,7 @@ Built EasyOCR two main API:
 
 2. `EasyOCR`: OCR text recognition Pictures core classes, complete the call to OCR engine. Internally With `ImageClean` complete automatic cleaning, identify integration work.
 
-
+ ### [API](API-en.md 'English API')
 
 ##  EasyOCR Examples：
 ![demo_eurotext.png](images/demo_eurotext.png)  

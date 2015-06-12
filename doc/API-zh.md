@@ -9,6 +9,8 @@ EasyOCR 内置两套主要的API：
 
 2. `EasyOCR`：识别图片文字的OCR核心类，完成对OCR引擎的调用。内部可借助`ImageClean`完成自动清理，识别的一体化工作。 
 
+ ### [javadoc](http://easyproject.cn/easyocr/javadoc/zh-cn/easyocr/index.html "Javadoc")
+
 ## 1. ImageClean:
 
 ImageClean主要是为了完成验证码的清理工作，支持图片清理、形变和旋转三种场景。图片清理选项内置多种清理方法，通过ImageType枚举可选择预定义的图片清理模式。

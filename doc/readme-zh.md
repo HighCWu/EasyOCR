@@ -38,6 +38,7 @@ EasyOCR 内置两套主要的API：
 
 2. `EasyOCR`：识别图片文字的OCR核心类，完成对OCR引擎的调用。内部可借助`ImageClean`完成自动清理，识别的一体化工作。
 
+ ### [API](API-zh.md '中文API')
 
 
 ##  EasyOCR 使用实例：

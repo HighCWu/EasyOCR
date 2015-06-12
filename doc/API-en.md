@@ -9,6 +9,7 @@ Built EasyOCR two main API:
 
 2. `EasyOCR`: OCR text recognition Pictures core classes, complete the call to OCR engine. Internally With `ImageClean` complete automatic cleaning, identify integration work.
 
+ ### [javadoc](http://easyproject.cn/easyocr/javadoc/zh-cn/easyocr/index.html "Javadoc")
 
 ## 1. ImageClean:
 
