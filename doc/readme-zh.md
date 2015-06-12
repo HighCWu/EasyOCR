@@ -29,7 +29,6 @@ tesseract-ocr 是一个相对精准的开源免费 OCR 引擎。但 OCR 引擎�
 3. 调用API
 
 
-
 ##  EasyOCR API：
 
 
@@ -69,6 +68,16 @@ for(double imageWidthRatio=0.8;imageWidthRatio<=2;imageWidthRatio+=0.1){
 }
 ```
 
+
+##  EasyOCR 中文识别示例：
+Tesseract 默认识别语言为英文，通过tesseractOptions属性可以修改识别语言的种类。
+```JAVA
+EasyOCR e=new EasyOCR();
+// 设置识别命令行参数为中文（默认为英文）
+e.setTesseractOptions(EasyOCR.OPTION_LANG_CHI_SIM);
+
+System.out.println(e.discern("C:\\novel.png"));
+```
 
 
 ## 结束

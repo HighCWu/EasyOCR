@@ -7,8 +7,7 @@ EasyOCR 内置两套主要的API：
 
 1. `ImageClean`：验证码图片清理类，完成各种验证码图片的清理工作并输出。支持图片清理（内置几种预定义的图片清理模式可以灵活切换选择）、形变和旋转三种场景，并支持场景的同时应用。
 
-2. `EasyOCR`：识别图片文字的OCR核心类，完成对OCR引擎的调用。内部可借助`ImageClean`完成自动清理，识别的一体化工作。
-
+2. `EasyOCR`：识别图片文字的OCR核心类，完成对OCR引擎的调用。内部可借助`ImageClean`完成自动清理，识别的一体化工作。 
 
 ## 1. ImageClean:
 
@@ -100,6 +99,10 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 ## 2. EasyOCR:
 
 识别图片文字的OCR核心类，完成对OCR引擎的调用。内部可借助`ImageClean`完成自动清理、形变、旋转和识别的一体化工作。
+ 
+- EasyOCR 提供两种类型的识别方法，并对识别结果提供直接返回字符串，保存到文件，保存到文件并返回字符串三种方式处理结果。
+ **直接识别**：discern、discernToFile、discernToFileAndGet 
+ **清理并识别**：discernAndAutoCleanImage、discernToFileAndAutoCleanImage、discernToFileAndGetAndAutoCleanImage 
 
 
 1. **构造方法：**
@@ -120,7 +123,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
  EasyOCR内置了中文和英文基本参数常量可供选择。
 
  ```JAVA
-    /**
+  /**
 	 * 英文识别命令执行参数
 	 */
 	public static final String OPTION_LANG_ENG = "-l eng";
@@ -128,8 +131,10 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	 * 中文识别命令执行参数
 	 */
 	public static final String OPTION_LANG_CHI_SIM = "-l chi_sim";
-```
+ ```
+
 3. **核心方法：**
+ EasyOCR 提供两种类型的识别方法，并对识别结果提供直接返回字符串，保存到文件，保存到文件并返回字符串三种方式处理结果。
 
  - 直接识别图片
   ```JAVA

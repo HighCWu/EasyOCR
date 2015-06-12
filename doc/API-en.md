@@ -101,6 +101,9 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
 
 OCR text recognition Pictures core classes to complete the call to OCR engine. Internally With `ImageClean` complete automatic cleaning, deformation, rotation and identify integration work.
 
+- EasyOCR support two types of recognition, and recognition results provide direct get the string, save to file, save it to a file and get a string results in three ways.
+  ** Direct identification **: discern, discernToFile, discernToFileAndGet
+  ** Clean and identification **: discernAndAutoCleanImage, discernToFileAndAutoCleanImage, discernToFileAndGetAndAutoCleanImage
 
 1. **Constructor:**
 
@@ -118,7 +121,7 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
    Tesseract-OCR can directly identify the default English. tesseractOptions property tesseract command line parameters can be specified to control the identified language (need to install language packs in advance), the details of parameters.
   EasyOCR built in Chinese and English, the basic parameters of the constants available.
 
- ```JAVA
+```JAVA
     /**
 	 * English recognition command parameters
 	 */
@@ -129,6 +132,7 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 	public static final String OPTION_LANG_CHI_SIM = "-l chi_sim";
 ```
 3. **Core methods:**
+EasyOCR support two types of recognition, and recognition results provide direct get the string, save to file, save it to a file and get a string results in three ways.
 
  - Direct identification pictures
   ```JAVA

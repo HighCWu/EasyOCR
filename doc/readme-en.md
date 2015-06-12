@@ -69,6 +69,15 @@ for(double imageWidthRatio=0.8;imageWidthRatio<=2;imageWidthRatio+=0.1){
 ```
 
 
+##  EasyOCR Chinese Identification Example:
+Tesseract default recognition language is English, tesseractOptions property can be modified by identifying the type of language.
+```JAVA
+EasyOCR e=new EasyOCR();
+// Set recognize command-line arguments for the Chinese (the default is English)
+e.setTesseractOptions(EasyOCR.OPTION_LANG_CHI_SIM);
+
+System.out.println(e.discern("C:\\novel.png"));
+```
 
 ## End
 
