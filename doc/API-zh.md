@@ -37,7 +37,9 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
   
  - `NONE` ： 在识别时，不对图片做任何清理
 
-*由于验证码图片种类繁多，而且具体场景要具体处理，并无完全通用的方案。EasyOCR内置的清理类型仅针对有限情况，面对具体场景还需通过有针对性处理，如通过其他方式对图片进行预处理，或对ORC引擎进行特别训练实现。*
+- 由于验证码图片种类繁多，而且具体场景要具体处理，并无完全通用的方案。EasyOCR内置的清理类型仅针对有限情况，面对具体场景还需通过有针对性处理，如通过其他方式对图片进行预处理，或对ORC引擎进行特别训练实现。
+- EasyOCR支持自定义图片清理插件，能够基于EasyOCR完成一体化识别的验证码图片清理识别。
+[EasyOCR 图片清理插件编写](Plugin-zh.md "EasyOCR 图片清理插件编写")
 
 1. **构造方法：**
 
@@ -50,7 +52,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
      * @param imageHeightRatio 图片宽度形变比例，默认为 1
      * @param degrees 图片顺时针旋转角度，默认为 0
      */
-     ImageClean([ImageType imageType] [, double imageWidthRatio] [, double  imageHeightRatio] [, int degrees]);
+     ImageClean([Type imageType] [, double imageWidthRatio] [, double  imageHeightRatio] [, int degrees]);
     ```
 2. **核心方法：**
  
@@ -75,7 +77,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 
  - 默认图片清理类型
  ```JAVA
-  void setImageType(ImageType imageType)
+  void setImageType(Type imageType)
  ```
 
  - 图片宽度和高度形变比例，某些图片形变后识别率可以提高，1为原始比例，不形变
@@ -119,11 +121,9 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
      EasyOCR([String tesseractPath] [, String tesseractOptions]);
     ```
 
-2. **tesseractOptions 中英文语言可选常量：**
-   
+ - **tesseractOptions 中英文语言可选常量：**
  Tesseract-OCR 默认可直接识别英文。tesseractOptions属性可以指定tesseract命令行参数，用来控制识别的语言（需要提前安装好语言包），细节参数等。
  EasyOCR内置了中文和英文基本参数常量可供选择。
-
  ```JAVA
   /**
 	 * 英文识别命令执行参数
@@ -135,7 +135,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	public static final String OPTION_LANG_CHI_SIM = "-l chi_sim";
  ```
 
-3. **核心方法：**
+2. **核心方法：**
  EasyOCR 提供两种类型的识别方法，并对识别结果提供直接返回字符串，保存到文件，保存到文件并返回字符串三种方式处理结果。
 
  - 直接识别图片
@@ -179,7 +179,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	 * @param autoCleanDegrees 图片自动清理时的顺时针旋转角度               
 	 * @return 识别内容
 	 */
-	public String discernAndAutoCleanImage(fromImage [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
+	public String discernAndAutoCleanImage(fromImage [, Type imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
 
 	/**
 	 * 按图片类型、形变比例、顺时针旋转角度等场景，清理识别图片内容，输出到指定文件，输出文件无需后缀名.txt
@@ -193,7 +193,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	 * @param autoCleanDegrees 图片自动清理时的顺时针旋转角度     
 	 * @return 生成是否完成
 	 */
-	public boolean discernToFileAndAutoCleanImage(fromImage [,String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public boolean discernToFileAndAutoCleanImage(fromImage [,String toFile] [, Type imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 
 	/**
 	 * 按图片类型、形变比例、顺时针旋转角度等场景，清理识别图片内容，输出到指定文件，并返回读取到的内容字符串，输出文件无需后缀名.txt
@@ -207,10 +207,10 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 	 * @param autoCleanDegrees 图片自动清理时的顺时针旋转角度     
 	 * @return 读取到的代码
 	 */
-	public String discernToFileAndGetAndAutoCleanImage(fromImage [, String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public String discernToFileAndGetAndAutoCleanImage(fromImage [, String toFile] [, Type imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 ```
 
-4. **其他方法：**
+3. **其他方法：**
 
 以下方法可以直接设置EasyOCR实例的默认属性值，在进行识别操作时，调用清理并识别图片方法时，无需每次直接传入参数。
 
@@ -226,7 +226,7 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
 
  - 设置图片清理类型
  ```JAVA
-  void setAutoCleanImageType(ImageType autoCleanImageType) 
+  void setAutoCleanImageType(Type autoCleanImageType) 
  ```
 
  - 图片宽度和高度形变比例，某些图片形变后识别率可以提高，1为原始比例，不形变

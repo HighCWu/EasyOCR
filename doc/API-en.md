@@ -37,7 +37,9 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
   
   - `NONE`: In recognition, the picture does not do any cleanup
 
-*Because CAPTCHA variety, and specific scenarios to be specifically addressed, there is no completely generic program. EasyOCR built-clean type only for limited circumstances, face particular scene needs through targeted treatment, such as by other means the picture pretreatment, or special training to achieve ORC engine.*
+- Because CAPTCHA variety, and specific scenarios to be specifically addressed, there is no completely generic program. EasyOCR built-clean type only for limited circumstances, face particular scene needs through targeted treatment, such as by other means the picture pretreatment, or special training to achieve ORC engine.
+- EasyOCR supports custom image cleanup plug-ins, can be based on EasyOCR complete integration CAPTCHA image cleanup identification recognition.
+[EasyOCR Image clean plugin write](Plugin-zh.md "EasyOCR Image clean plugin write")
 
 1. **Constructor:**
 
@@ -50,7 +52,7 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
       *@param ImageHeightRatio deformation ratio of image width, default is 1
       *@param Degrees clockwise rotation angle of the picture, the default is 0
       */
-     ImageClean([ImageType imageType] [, double imageWidthRatio] [, double  imageHeightRatio] [, int degrees]);
+     ImageClean([Type imageType] [, double imageWidthRatio] [, double  imageHeightRatio] [, int degrees]);
     ```
 2. **Core methods:**
  
@@ -75,7 +77,7 @@ ImageClean mainly in order to complete the cleanup code, the support picture cle
 
  - Default image cleanup type
   ```JAVA
-   void setImageType (ImageType imageType)
+   void setImageType (Type imageType)
   ```
 
   - The ratio of image width and height of the deformation, deformation after some picture recognition rate can be improved, one of the original proportions, no deformation
@@ -118,11 +120,10 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
      EasyOCR([String tesseractPath] [, String tesseractOptions]);
     ```
 
-2. **tesseractOptions English language optional constants:**
+ - **tesseractOptions English language optional constants:**
    Tesseract-OCR can directly identify the default English. tesseractOptions property tesseract command line parameters can be specified to control the identified language (need to install language packs in advance), the details of parameters.
   EasyOCR built in Chinese and English, the basic parameters of the constants available.
-
-```JAVA
+ ```JAVA
     /**
 	 * English recognition command parameters
 	 */
@@ -132,7 +133,7 @@ OCR text recognition Pictures core classes to complete the call to OCR engine. I
 	 */
 	public static final String OPTION_LANG_CHI_SIM = "-l chi_sim";
 ```
-3. **Core methods:**
+2. **Core methods:**
 EasyOCR support two types of recognition, and recognition results provide direct get the string, save to file, save it to a file and get a string results in three ways.
 
  - Direct identification pictures
@@ -176,7 +177,7 @@ EasyOCR support two types of recognition, and recognition results provide direct
     * @param AutoCleanDegrees picture clockwise angle when automatic cleaning
     * @return Identify the content
     */
-	public String discernAndAutoCleanImage(fromImage [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
+	public String discernAndAutoCleanImage(fromImage [, Type imageType] [, double autoCleanImageWidthRatio] [, double  autoCleanImageHeightRatio] [, int autoCleanDegrees]) 
 
     /**
     * Press the picture type, strain ratio clockwise angle scene cleanup identify the image content, the output to the specified file, the default file name: Photo of .txt
@@ -190,7 +191,7 @@ EasyOCR support two types of recognition, and recognition results provide direct
     * @param AutoCleanDegrees picture clockwise angle when automatic cleaning
     * @return Generation is complete
     */
-	public boolean discernToFileAndAutoCleanImage(fromImage [,String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public boolean discernToFileAndAutoCleanImage(fromImage [,String toFile] [, Type imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 
 	/**
     * Press the picture type, strain ratio clockwise angle scene cleanup identification picture content, output to the specified file and returns to read the contents of the string, the output file without .txt extension
@@ -204,10 +205,10 @@ EasyOCR support two types of recognition, and recognition results provide direct
     * @param AutoCleanDegrees picture clockwise angle when automatic cleaning
     * @return Read code
     */
-	public String discernToFileAndGetAndAutoCleanImage(fromImage [, String toFile] [, ImageType imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
+	public String discernToFileAndGetAndAutoCleanImage(fromImage [, String toFile] [, Type imageType] [, double autoCleanImageWidthRatio] [, double autoCleanImageHeightRatio] [,int autoCleanDegrees])
 ```
 
-4. **Other methods:**
+3. **Other methods:**
 The following methods can be directly set the default property values EasyOCR instance, during the identification operation, clean up and identify pictures when calling method, each directly without passing parameters.
 
  - Location tesseract execute command if the configuration of the path environment variable, you can not set
@@ -222,7 +223,7 @@ The following methods can be directly set the default property values EasyOCR in
 
  - Picture cleanup type
  ```JAVA
-  void setAutoCleanImageType(ImageType autoCleanImageType) 
+  void setAutoCleanImageType(Type autoCleanImageType) 
  ```
 
  - Image width and height ratio of deformation, deformation some pictures after the recognition rate can be improved, one of the original proportions, no deformation

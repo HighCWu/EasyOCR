@@ -13,7 +13,8 @@ EasyOCR is implemented using the Java language OCR recognition component, its wo
 
 - Specific code used to clean up the image, identify integration implementation, support for image cleanup, deformation and rotation three scenarios, built many common types of CAPTCHA cleanup options
 - API minimalist, a method, a line of code to complete
-- Because based Tesseract-OCR engine, so the engine supports multiple languages are recognized.
+- Because based Tesseract-OCR engine, so the engine supports multiple languages are recognized
+- Supports plugins, the ability to write extensions to clean up the integration of identification based EasyOCR CAPTCHA
 
 ** Character Recognition Description: **
 
