@@ -19,9 +19,9 @@ EasyOCR最主要的特点，就是除了使用一行代码就能完成OCR识别�
 
 - 已开发的针对指定处理场景的验证码插件: 
 
-| plugin | ImageClean Enum |
+| plugin | ImageClean Enum | required |
 | ---- | ---- | 
-| easyocr-linkbold-plugin-3.0.0-RELEASE.jar  | `LinkBoldImageType.LINK_BOLD ` |
+| **easyocr-linkbold**-plugin-3.0.0-RELEASE.jar  | `LinkBoldImageType.LINK_BOLD ` | 1. Create new file: `%Tesseract-OCR%\tessdata\configs\lettersAndNumbers` <br/> 2. Character defining, write content to file: `tessedit_char_whitelist 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`  <br/> 3. Set tesseractOptions: ` lettersAndNumbers` <br/> `EasyOCR ec=new EasyOCR();` <br/>	`ec.setTesseractOptions("lettersAndNumbers");`  |
 
 
 - 插件详情
