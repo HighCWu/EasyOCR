@@ -21,7 +21,7 @@ Finally, it is worth considering that in the OCR recognition technology continue
 
 
 | plugin | ImageClean Enum | required |
-| ---- | ---- | 
+| ----------- | ------------ | ----------- |
 | **easyocr-linkbold**-plugin-3.0.0-RELEASE.jar  | `LinkBoldImageType.LINK_BOLD ` | 1. Create new file: `%Tesseract-OCR%\tessdata\configs\lettersAndNumbers` <br/> 2. Character defining, write content to file: `tessedit_char_whitelist 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`  <br/> 3. Set tesseractOptions: ` lettersAndNumbers` <br/> `EasyOCR ec=new EasyOCR();` <br/>	`ec.setTesseractOptions("lettersAndNumbers");`  |
 
 
