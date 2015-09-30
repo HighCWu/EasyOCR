@@ -2,23 +2,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+
 	<!-- 1. OSS parent -->
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>9</version>
 	</parent>
-
+	
 	<!-- 2. OSS infomation -->
 	<groupId>cn.easyproject</groupId>
-	<artifactId>easyocr</artifactId>
+	<artifactId>easyocr-linkbold-plugin</artifactId>
 	<version>3.0.3-RELEASE</version>
 	<packaging>jar</packaging>
-	<name>EasyOCR</name>
+	<name>EasyOCR-LinkBold-Plugin</name>
 	<url>http://easyproject.cn/easyocr</url>
 	<description>
   	<![CDATA[
-	Java Image cleanup, OCR recognition component (based Tesseract OCR engine, automatically cleanup image and identification CAPTCHA verification code picture content). 
+  		EasyOCR ImageClean Enum: LinkBold Plugin
   	]]>
   </description>
 	<licenses>
@@ -27,7 +28,6 @@
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
-
 	<scm>
 		<url>https://github.com/ushelp/EasyOCR.git</url>
 		<connection>scm:git:ssh://github.com/ushelp/EasyOCR.git</connection>
@@ -101,24 +101,24 @@
 		</profile>
 	</profiles>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-	<!-- 两个ID必须与 setting.xml中的<server><id>oss</id></server>保持一致 -->
-	<!-- parent中定义了默认的server id：sonatype-nexus-snapshots和sonatype-nexus-staging。server中id只要配置一致即可。 -->
-	<!-- <distributionManagement> <snapshotRepository> <id>oss</id> <url>https://oss.sonatype.org/content/repositories/snapshots/</url> 
-		</snapshotRepository> <repository> <id>oss</id> <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url> 
-		</repository> </distributionManagement> -->
-
-
-	<!-- 4. Other -->
 	<dependencies>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>cn.easyproject</groupId>
+			<artifactId>easyocr</artifactId>
+			<version>3.0.3-RELEASE</version>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>

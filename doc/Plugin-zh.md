@@ -23,6 +23,15 @@ EasyOCR最主要的特点，就是除了使用一行代码就能完成OCR识别�
 | ----------- | ------------ | ----------- |
 | **easyocr-linkbold**-plugin-3.0.0-RELEASE.jar  | `LinkBoldImageType.LINK_BOLD ` | 1. Create new file: `%Tesseract-OCR%\tessdata\configs\lettersAndNumbers` <br/> 2. Character defining, write content to file: `tessedit_char_whitelist 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`  <br/> 3. Set tesseractOptions: ` lettersAndNumbers` <br/> `EasyOCR ec=new EasyOCR();` <br/>	`ec.setTesseractOptions("lettersAndNumbers");`  |
 
+- Maven
+```XML
+<-- EasyOCR  plugins -->
+<dependency>
+       <groupId>cn.easyproject</groupId>
+       <artifactId>easyocr-linkbold-plugin</artifactId>
+       <version>3.0.3-RELEASE</version>
+</dependency>
+```
 
 - 插件详情
 [Plugins](../plugins/Plugins.md "Plugins ")

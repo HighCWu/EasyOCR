@@ -9,6 +9,14 @@ It has been developed for the specified processing scenarios verification code p
 | ----------- | ------------ | ----------- |
 | **easyocr-linkbold**-plugin-3.0.0-RELEASE.jar  | `LinkBoldImageType.LINK_BOLD ` | 1. Create new file: `%Tesseract-OCR%\tessdata\configs\lettersAndNumbers` <br/> 2. Character defining, write content to file: `tessedit_char_whitelist 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`  <br/> 3. Set tesseractOptions: ` lettersAndNumbers` <br/> `EasyOCR ec=new EasyOCR();` <br/>	`ec.setTesseractOptions("lettersAndNumbers");`  |
 
+- ### Maven
+```XML
+<dependency>
+       <groupId>cn.easyproject</groupId>
+       <artifactId>easyocr-linkbold-plugin</artifactId>
+       <version>3.0.3-RELEASE</version>
+</dependency>
+```
 
 ## 2. Plugins Description
  - #### easyocr-linkbord Plugin

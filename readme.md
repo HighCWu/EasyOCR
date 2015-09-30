@@ -12,7 +12,17 @@ Java Image cleanup, OCR recognition component (based Tesseract OCR engine, autom
 - [English](doc/readme-en.md)
 
 
+## Maven
+```XML
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easyocr</artifactId>
+	<version>3.0.3-RELEASE</version>
+</dependency>
+```
 
+
+## 
 
 
 ### [官方主页](http://www.easyproject.cn/easyocr/zh-cn/index.jsp '官方主页')

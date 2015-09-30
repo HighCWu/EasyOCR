@@ -26,6 +26,14 @@ tesseract-ocr 是一个相对精准的开源免费 OCR 引擎。但 OCR 引擎�
 1. 必须首先在服务器下载并安装[Tesseract-OCR（项目主页）](https://code.google.com/p/tesseract-ocr/ "Tesserat-OCR Homepage")。在PATH环境变量中添加Tesseract-OCR的执行目录（可选，推荐设置）。
 
 2. 加入`easyocr-2.2.0-RELEASE.jar`
+ - Maven
+ ```XML
+ <dependency>
+     	<groupId>cn.easyproject</groupId>
+     	<artifactId>easyocr</artifactId>
+     	<version>3.0.3-RELEASE</version>
+ </dependency>
+ ```
 
 3. 调用API
 
