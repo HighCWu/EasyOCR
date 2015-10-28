@@ -12,7 +12,7 @@
 	<!-- 2. OSS infomation -->
 	<groupId>cn.easyproject</groupId>
 	<artifactId>easyocr</artifactId>
-	<version>3.0.3-RELEASE</version>
+	<version>3.0.4-RELEASE</version>
 	<packaging>jar</packaging>
 	<name>EasyOCR</name>
 	<url>http://easyproject.cn/easyocr</url>
@@ -31,7 +31,7 @@
 	<scm>
 		<url>https://github.com/ushelp/EasyOCR.git</url>
 		<connection>scm:git:ssh://github.com/ushelp/EasyOCR.git</connection>
-		<tag>easyfilter</tag>
+		<tag>easyocr</tag>
 	</scm>
 	<developers>
 		<developer>
@@ -112,12 +112,14 @@
 	<!-- 4. Other -->
 	<dependencies>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
 			<type>jar</type>
-			<scope>compile</scope>
+			<scope>test</scope>
 		</dependency>
+
+
 	</dependencies>
 	<build>
 		<plugins>

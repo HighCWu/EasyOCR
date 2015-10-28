@@ -25,13 +25,13 @@ tesseract-ocr is a relatively accurate free open source OCR engine. Character Re
 
 1. You must first download and install [Tesseract-OCR (project home)] (https://code.google.com/p/tesseract-ocr/ "Tesserat-OCR Homepage") in the server. Add Tesseract-OCR perform directory in the PATH environment variable (optional, but recommended setting).
 
-2. Add `easyocr-2.2.0-RELEASE.jar`
+2. Add `easyocr-3.0.4-RELEASE.jar`
  - Maven
  ```XML
  <dependency>
  	<groupId>cn.easyproject</groupId>
  	<artifactId>easyocr</artifactId>
- 	<version>3.0.3-RELEASE</version>
+ 	<version>3.0.4-RELEASE</version>
  </dependency>
  ```
 3. Call API

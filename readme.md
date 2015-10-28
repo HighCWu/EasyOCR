@@ -13,11 +13,21 @@ Java Image cleanup, OCR recognition component (based Tesseract OCR engine, autom
 
 
 ## Maven
+- EasyOCR
 ```XML
 <dependency>
-	<groupId>cn.easyproject</groupId>
-	<artifactId>easyocr</artifactId>
-	<version>3.0.3-RELEASE</version>
+ 	<groupId>cn.easyproject</groupId>
+ 	<artifactId>easyocr</artifactId>
+ 	<version>3.0.4-RELEASE</version>
+</dependency>
+```
+
+- Plugin: EasyOCR-linkbold
+```XML
+<dependency>
+     <groupId>cn.easyproject</groupId>
+     <artifactId>easyocr-linkbold-plugin</artifactId>
+     <version>3.0.3-RELEASE</version>
 </dependency>
 ```
 
