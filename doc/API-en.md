@@ -244,14 +244,3 @@ The following methods can be directly set the default property values EasyOCR in
  ```JAVA
   void setDegrees(int autoCleanDegrees)
  ```
-
-
-## End
-
-[Comments](http://www.easyproject.cn/easyocr/zh-cn/index.jsp#about 'Comments')
-
-If you have more comments, suggestions or ideas, please contact me.
-
-Email：<inthinkcolor@gmail.com>
-
-[http://www.easyproject.cn](http://www.easyproject.cn "EasyProject Home")

@@ -121,14 +121,3 @@ public enum LinkBoldImageType implements Type {
 	EasyOCR ec=new EasyOCR();
 	System.out.println(ec.discernAndAutoCleanImage("images/link_bold_text/test/dk3d.png", LinkBoldImageType.LINK_BOLD));
 ```
-
-
-## End
-
-[Comments](http://www.easyproject.cn/easyocr/zh-cn/index.jsp#about 'Comments')
-
-If you have more comments, suggestions or ideas, please contact me.
-
-Email：<inthinkcolor@gmail.com>
-
-[http://www.easyproject.cn](http://www.easyproject.cn "EasyProject Home")

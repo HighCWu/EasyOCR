@@ -247,16 +247,3 @@ ImageClean主要是为了完成验证码的清理工作，支持图片清理、�
  ```JAVA
   void setDegrees(int autoCleanDegrees)
  ```
-
-
-## 结束
-
-[留言评论](http://www.easyproject.cn/easyocr/zh-cn/index.jsp#about '留言评论')
-
-如果您有更好意见，建议或想法，请联系我。
-
-
-联系、反馈、定制、培训 Email：<inthinkcolor@gmail.com>
-
-
-[http://www.easyproject.cn](http://www.easyproject.cn "EasyProject Home")
